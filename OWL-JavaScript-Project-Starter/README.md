@@ -1,33 +1,22 @@
-# OWL (v1) Javascript Project Starter
+# ![RealWorld Example App](logo.png)
 
-> **Warning**
-> This project uses OWL **version 1**, OWL v2 is out (used in Odoo 16) and is the **preferred** version of the framework!
-> Use this starter project only if you are following the Tutorial on https://codingdodo.com, if not please
-> **prefer this repository [OWL2-JavaScript-Project-Starter](https://github.com/Coding-Dodo/OWL2-JavaScript-Project-Starter)**
+[![Deploy on Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Coding-Dodo/owl-realworld-app)
 
-This repo is an example on how to start a real project with the Odoo OWL framework.
+> ### OWL (Odoo Web Library) codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
-Thanks to @SimonGenin for it's [original Starter Project for OWL](https://github.com/SimonGenin/OWL-JavaScript-Project-Starter)
+### [Demo](https://owl-realworld.netlify.app)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
 
-[![Deploy on Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Coding-Dodo/OWL-JavaScript-Project-Starter)
+This codebase was created to demonstrate a fully fledged fullstack application built with OWL (Odoo Web Library) including CRUD operations, authentication, routing, pagination, and more.
 
-## Features
+We've gone to great lengths to adhere to the OWL (Odoo Web Library) community styleguides & best practices.
 
-- [OWL](https://github.com/odoo/owl) v1.4.5
-- Javascript
-- Livereload
-- Rollup.js v2.57
-- Tests with Jest v27
+For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
 
-## Installation
+# How it works
 
-[This repo is a "template repository". It means you can quickly create repositories based on this one, without it being a fork.](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template#about-repository-templates)
+> Describe the general architecture of your app here
 
-Otherwise, you may clone it:
-
-```bash
-git clone https://github.com/Coding-Dodo/OWL-JavaScript-Project-Starter.git
-```
+# Getting started
 
 Install dependencies:
 
@@ -52,31 +41,3 @@ Run tests
 ```bash
 npm run test
 ```
-
-## Components
-
-It is expected to create components in one file, following this convention:
-
-```js
-import { Component, useState, tags } from "@odoo/owl";
-
-const APP_TEMPLATE = tags.xml/*xml*/ `
-<div t-name="App" class="" t-on-click="update">
-  Hello <t t-esc="state.text"/>
-</div>
-`;
-
-export class App extends Component {
-  static template = APP_TEMPLATE;
-  state = useState({ text: "Owl" });
-  update() {
-    this.state.text = this.state.text === "Owl" ? "World" : "Owl";
-  }
-}
-```
-
-## See also
-
-If your are searching for the a project starter with Tailwind and PostCSS:
-
-[https://github.com/Coding-Dodo/OWL-JavaScript-Tailwind-Project-Starter](https://github.com/Coding-Dodo/OWL-JavaScript-Tailwind-Project-Starter)
